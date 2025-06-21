@@ -1,0 +1,137 @@
+/* 1. Kanan bawah -> kiri atas */
+@keyframes bottomRightToTopLeftSlow {
+  0% {
+    transform: translate(10%, 10%) scale(1.2);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0, 0) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-10%, -10%) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate_bottomRightToTopLeftSlow {
+  animation: bottomRightToTopLeftSlow 10s ease forwards;
+}
+
+/* 2. Kanan atas -> kiri bawah */
+@keyframes topRightToBottomLeftSlow {
+  0% {
+    transform: translate(10%, -10%) scale(1.2);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0, 0) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-10%, 10%) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate_topRightToBottomLeftSlow {
+  animation: topRightToBottomLeftSlow 10s ease forwards;
+}
+
+/* 3. Kiri -> Kanan */
+@keyframes leftToRightSlow {
+  0% {
+    transform: translateX(-10%) scale(1.2);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(10%) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate_leftToRightSlow {
+  animation: leftToRightSlow 10s ease forwards;
+}
+
+/* 4. Kanan -> Kiri */
+@keyframes rightToLeftSlow {
+  0% {
+    transform: translateX(10%) scale(1.2);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-10%) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate_rightToLeftSlow {
+  animation: rightToLeftSlow 10s ease forwards;
+}
+
+/* 5. Atas -> Bawah */
+@keyframes topToBottomSlow {
+  0% {
+    transform: translateY(-10%) scale(1.2);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(10%) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate_topToBottomSlow {
+  animation: topToBottomSlow 10s ease forwards;
+}
+
+/* 6. Bawah -> Atas */
+@keyframes bottomToTopSlow {
+  0% {
+    transform: translateY(10%) scale(1.2);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10%) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate_bottomToTopSlow {
+  animation: bottomToTopSlow 10s ease forwards;
+}
+
+/* Custom animation for background pan */
+@keyframes pan {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.animate-pan {
+  background-size: 200% 200%; /* Make background larger to allow panning */
+  animation: pan 60s linear infinite;
+}

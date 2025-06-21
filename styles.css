@@ -1,0 +1,155 @@
+body {
+  font-family: "Montserrat", "Inter", sans-serif;
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  scroll-behavior: smooth; /* Smooth scrolling for navigation */
+}
+
+body.lock-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.bg-gradient-section {
+  background: linear-gradient(
+    180deg,
+    rgba(238, 238, 238, 100) 0%,
+    rgba(39, 39, 39) 70%,
+    rgb(39, 39, 39) 100%
+  );
+}
+
+.bg-custom-black {
+  background: #272727;
+}
+
+/* Custom modal styles */
+.modal-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+/* Carousel styles */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  aspect-ratio: 16/9; /* Maintain aspect ratio */
+}
+
+/* Custom scrollbar for gallery (optional, for aesthetics) */
+.gallery-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery-grid::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.gallery-grid::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.gallery-grid::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Custom fonts */
+
+.marck-script-regular {
+  font-family: "Marck Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bodoni-moda-medium {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.title-font {
+  font-family: "Amore Dreaming Sans Serif", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.main-title {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.sec-title-font {
+  font-family: "Ratherlafia Forghive", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.title-font-2 {
+  font-family: "Hefigrah", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.sec-title-font-2 {
+  font-family: "The Wedding Signature", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Animation for spinning slow Music */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 6s linear infinite;
+}
+
+.paused {
+  animation-play-state: paused !important;
+}
