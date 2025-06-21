@@ -1395,6 +1395,22 @@
           icon.classList.add("paused");
         }
       }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        music
+          .play()
+          .then(() => {
+            icon.classList.remove("paused");
+          })
+          .catch(() => {
+            const startMusicOnce = () => {
+              music.play();
+              icon.classList.remove("paused");
+              document.body.removeEventListener("click", startMusicOnce);
+            };
+            document.body.addEventListener("click", startMusicOnce);
+          });
+      });
     </script>
   </body>
 </html>
