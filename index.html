@@ -1412,5 +1412,15 @@
           });
       });
     </script>
+    <script>
+      AOS.init();
+
+      // Force re-check AOS after cover load
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          AOS.refresh();
+        }, 500);
+      });
+    </script>
   </body>
 </html>
