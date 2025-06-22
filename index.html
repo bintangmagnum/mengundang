@@ -79,7 +79,7 @@
     <!-- COVER PAGE -->
     <section
       id="coverPage"
-      class="fixed inset-0 w-full h-screen overflow-hidden flex flex-col justify-between text-center text-white z-[100] bg-black"
+      class="fixed inset-0 w-full max-h-screen overflow-hidden flex flex-col justify-between text-center text-white z-[100] bg-black"
     >
       <!-- Background Slideshow -->
       <div
@@ -106,14 +106,16 @@
       <div
         class="relative z-10 flex-1 w-full flex items-center justify-center px-4 sm:px-6 md:px-10"
       >
-        <div class="max-w-lg w-full text-center">
+        <div class="max-w-md w-full text-center">
           <!-- Ornamen Tengah Jika Ada -->
           <!-- <img src="assets/dekorasi-center.png" class="mx-auto w-40 md:w-60" alt="Ornamen"> -->
         </div>
       </div>
 
       <!-- Teks + Tombol Bawah -->
-      <div class="relative z-10 px-4 flex flex-col items-center mt-auto mb-12">
+      <div
+        class="relative z-10 px-4 flex flex-col items-center mt-auto mb-20 sm:mb-20 md:mb-20"
+      >
         <h1
           class="text-4xl sm:text-5xl md:text-6xl title-font-2 font-semibold mb-2"
           data-aos="zoom-in"
